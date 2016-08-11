@@ -1,0 +1,19 @@
+<div class="container padded">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.error_notification %>
+        <h3>Add a dose for: <%= @cocktail.name %></h3>
+        <div class="form-inputs padded">
+          <%= f.input :ingredient, collection: @ingredients%>
+          <%= f.input :description %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, class: "btn btn-danger" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

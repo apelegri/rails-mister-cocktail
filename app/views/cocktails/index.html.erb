@@ -1,17 +1,21 @@
-<h1>Cocktails</h1>
+<%#= link_to 'Add a Cocktail', new_cocktail_path, {class: "btn btn-danger"} %>
+<!-- <div class="col-xs-12 col-sm-4">
+  <h1>Cocktails</h1>
+  <%#= link_to 'Add a Cocktail', new_cocktail_path, {class: "btn btn-danger"} %>
+</div> -->
 
-<%= link_to 'Add a Cocktail', new_cocktail_path, {class: "btn btn-primary"} %>
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
+<div class="wrapper">
+  <div class="container">
     <% @cocktails.each do |cocktail| %>
-    <h1><%= cocktail.name %></h1>
- <!--    <p><%#= cocktail.doses %></p>
-    <p><%#= cocktail.ingredients %></p> -->
-    <%= link_to 'Show', cocktail_path(cocktail), {class: "btn btn-primary"} %>
-  <% end %>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <h1><%= cocktail.name %></h1>
+          <%= link_to 'Show', cocktail_path(cocktail), {class: "btn btn-danger"} %>
+        </div>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
+
+
+

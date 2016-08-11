@@ -1,9 +1,13 @@
 <div class="container padded">
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
-    <h1><%= @cocktail.name %></h1>
-    <!-- <h4>Dose: <%#= @cocktail.dose %></h4>
-    <h4>Ingredients: <%#= @cocktail.dose %></h4> -->
-    <%= link_to 'Back', cocktails_path, class: "btn btn-primary" %>
+      <h1><%= @cocktail.name %></h1>
+      <%= link_to 'Back', cocktails_path, class: "btn btn-danger" %>
+
+      <%= link_to 'Add a Dose', new_cocktail_dose_path(@cocktail), {class: "btn btn-danger"} %>
+      <% @cocktail.doses.each do |dose| %>
+        <p><strong>Ingredient: </strong><%= dose.ingredient.name %><p>
+        <p><strong>Description: </strong><%= dose.description %></p>
+      <% end %>
   </div>
 </div>
