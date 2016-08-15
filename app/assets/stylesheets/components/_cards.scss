@@ -1,0 +1,23 @@
+.card-form {
+  background: white;
+  padding: 70px 50px;
+  margin: 50px;
+  border: solid 1px #D23333;
+}
+
+.card {
+  height: 175px;
+  margin: 20px 10px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+  background-color: white;
+}
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+}

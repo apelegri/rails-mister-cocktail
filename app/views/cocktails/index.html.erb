@@ -5,16 +5,21 @@
 </div> -->
 
 <div class="wrapper">
+  <br>
   <div class="container">
-    <% @cocktails.each do |cocktail| %>
-      <div class="row">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
         <div class="col-xs-12 col-sm-4">
-          <h1><%= cocktail.name %></h1>
-          <%= link_to 'Show', cocktail_path(cocktail), {class: "btn btn-danger"} %>
+          <div class="card text-center">
+            <div class="card-category">
+              <h1><%= cocktail.name %></h1>
+              <%= link_to 'Show', cocktail_path(cocktail), {class: "btn btn-danger"} %>
+            </div>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
 
 

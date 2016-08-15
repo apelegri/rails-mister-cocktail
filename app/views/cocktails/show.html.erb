@@ -2,7 +2,13 @@
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
       <h1><%= @cocktail.name %></h1>
+      <ul class="list-unstyled">
+        <% @cocktail.doses.each do |dose| %>
+          <li><%= dose.description %> <%= link_to dose.ingredient.name, ingredient_path(doses.ingredient_id) %> <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></li>
+        <% end %>
+      </ul>
       <%= link_to 'Back', cocktails_path, class: "btn btn-danger" %>
+
 
       <%= link_to 'Add a Dose', new_cocktail_dose_path(@cocktail), {class: "btn btn-danger"} %>
       <% @cocktail.doses.each do |dose| %>
@@ -11,3 +17,8 @@
       <% end %>
   </div>
 </div>
+
+
+
+
+

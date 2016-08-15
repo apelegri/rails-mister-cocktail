@@ -1,13 +1,15 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png" %>
+    <i class="fa fa-glass" aria-hidden="true"></i>
+    <span class="gray">Wired Cocktail App</span>
   <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Add Cocktails"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <%#= link_to t(".top_call_to_action", default: "Add Cocktails"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <a class="navbar-wagon-item navbar-wagon-button btn" href="/cocktails/new">Add Cocktails</a>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->

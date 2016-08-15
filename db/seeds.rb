@@ -1,3 +1,5 @@
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+Ingredient.destroy_all
+
+Ingredient.create(name: "pastis")
+Ingredient.create(name: "gin")
+Ingredient.create(name: "tonic")
